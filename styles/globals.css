@@ -1,16 +1,79 @@
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+button {
+	font-family: Averta, sans-serif;
+}
+
+@font-face {
+	font-family: "Averta";
+	src: url("/fonts/AvertaDemo/AvertaDemo-Regular.otf");
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Averta";
+	src: url("/fonts/AvertaDemo/AvertaDemo-ExtraBoldItalic.otf");
+	font-style: italic;
+	font-weight: bolder;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 94px;
+	text-transform: capitalize;
+	color: rgba(0, 0, 0, 0.8);
+	position: relative;
+}
+
+h1::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	height: 8px;
+	width: 96px; /* or 100px */
+	border-bottom: 5px solid #e56717;
+}
+
+button {
+	font-size: 26px;
+	line-height: 35px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #e56717;
+	border-radius: 30px;
+	padding: 8px 20px;
+	border: none;
+}
+
+@media (max-width: 998px) {
+	h1 {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	button {
+		font-size: 16px;
+		line-height: 25px;
+		padding: 8px 20px;
+	}
+}
+
+@media (max-width: 568px) {
+	h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
 }
